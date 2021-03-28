@@ -26,3 +26,10 @@ Uncaught TypeError: Cannot read property 'dataset' of null at HTMLBodyElement.<a
 
 Решение:
 *index.ts* -> () => dispatch(actionNext())
+
+#### Ошибка 4
+
+*index.css* - не указаны единицы в селекторе *.slide-progress-value*
+
+Решение:
+*index.css* -> .slide-progress-value { height: 4px; }
