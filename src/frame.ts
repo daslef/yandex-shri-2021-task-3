@@ -30,9 +30,10 @@ function onDocumentClick(e: MouseEvent) {
         while(target && !target.dataset.action) {
             target = target.parentElement;
         }
-
+        if (target && target.dataset) {
             const { action, params } = target.dataset;
             sendMessage(messageAction(action, params));
+        }
     }
 }
 
