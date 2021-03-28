@@ -1,5 +1,8 @@
 ## Ошибки
 
+#### Webpack
+
+Отключил *perfomance hints* и выставил *mode: production*
 #### Ошибка 1
 
 [tsl] ERROR in D:\code\shri-2021-task-3\src\application\data.ts(46,14)

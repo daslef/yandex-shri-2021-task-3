@@ -5,6 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+    mode: "production",
     entry: {
         index: './src/index.ts',
         frame: './src/frame.ts',
@@ -37,5 +38,8 @@ module.exports = {
     output: {
         filename: '[name].[contenthash:8].js',
         path: path.resolve(__dirname, 'dist'),
+    },
+    performance: {
+        hints: false,
     },
 };
