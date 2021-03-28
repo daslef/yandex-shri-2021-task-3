@@ -19,3 +19,10 @@ Uncaught TypeError: Cannot read property 'dataset' of null at HTMLBodyElement.<a
 
 Решение: 
 *frame.ts* - восстановить пропавшую условную конструкцию *if (target && target.dataset)*
+
+#### Ошибка 3
+
+*index.ts* подсветка неиспользуемого импорта помогла заметить, что в слушателе селектора *.next* диспатчится не то действие
+
+Решение:
+*index.ts* -> () => dispatch(actionNext())
