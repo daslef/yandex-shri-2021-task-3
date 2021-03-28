@@ -21,7 +21,7 @@ export function createEffects(
     );
     
     const messageEffect$ = actions$.pipe(
-        ofType<ReturnType<typeof actionMessage>>('message'),
+        ofType<ReturnType<typeof actionMessage>>('message') as MonoTypeOperatorFunction<any>,
         mergeMap(a => {
             switch (a.action) {
                 case 'go-prev':
@@ -37,7 +37,7 @@ export function createEffects(
                     return EMPTY;
             }
         })
-    )
+    ) as Observable<Action>
     
     return merge(timerEffect$, changeSlideEffect$, messageEffect$);
 }

@@ -83,3 +83,25 @@ bars.forEach((el, i) => setScale(el, i < index ? 1 : 0));
 *index.css* - удаление медиазапроса, скрывающего кнопку <-
 *state.ts* - *DEFAULT_STATE* { theme: 'dark' }
 *view.ts* - с имеющейся реализацией *setElementTheme* при попытке смены темы предыдущий css-класс не удалялся - переписал через ветвления
+
+#### Дальнейший поиск
+
+Включил *strict-mode* в *tsconfig.json* - добавилось 13 ошибок, связанных с *null* и *undefined* значениями, а также чуть более интересные:
+```typescript
+TS2345: Argument of type 'MonoTypeOperatorFunction<{ readonly type: "message"; readonly action: string; readonly params: string; }>' is not assignable to parameter of type 'OperatorFunction<Action, { readonly type: "message"; readonly action: string; readonly params: string; }>'.
+  Types of parameters 'source' and 'source' are incompatible.
+    Type 'Observable<Action>' is not assignable to type 'Observable<{ readonly type: "message"; readonly action: string; readonly params: string; }>'.
+      Type 'Action' is not assignable to type '{ readonly type: "message"; readonly action: string; readonly params: string; 
+}'.
+        Type '{ readonly type: "next"; }' is missing the following properties from type '{ readonly type: "message"; readonly action: string; readonly params: string; }': action, params
+``` 
+и
+```typescript
+[tsl] ERROR in D:\code\shri-2021-task-3\src\application\effects.ts(42,5)
+      TS2322: Type 'Observable<unknown>' is not assignable to type 'Observable<Action>'.
+  Type 'unknown' is not assignable to type 'Action'.
+    Type 'unknown' is not assignable to type '{ readonly type: "update"; readonly data: Partial<Slide>; }'.
+```
+
+Добавил опционально проверки на *null*, операторы *?.* и *!*  -  ничего критичного вроде не обнаружилось.
+Сделал каст *messageEffect* *as Observable\<Action>*, и похожим образом с *TS2345*. Осталось неприятное ощущение, что проблему не решил, а просто добавил заглушки. Наверное, так и есть. Также убрал *@ts-ignore* из *data.ts*, но аналоги *proxyProperty* и *die* нашлись в исходниках и issues к *immer*, так что оставил их в покое... 

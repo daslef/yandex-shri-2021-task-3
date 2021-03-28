@@ -28,9 +28,9 @@ function onDocumentClick(e: MouseEvent) {
     if (e.target instanceof HTMLElement) {
         let target = e.target;
         while(target && !target.dataset.action) {
-            target = target.parentElement;
+            target = target.parentElement!;
         }
-        if (target && target.dataset) {
+        if (target.dataset?.action && target.dataset?.params) {
             const { action, params } = target.dataset;
             sendMessage(messageAction(action, params));
         }
