@@ -3,10 +3,10 @@ import { setElementTheme } from './application/view';
 import './frame.css';
 
 interface ExtendedWindow extends Window { 
-    renderTemplate: (alias: string, data: object) => string 
+    renderTemplate: (alias: string, data: Record<string, unknown>) => string 
 }
 
-declare var window: ExtendedWindow;
+declare var window: ExtendedWindow; // eslint-disable-line no-var
 
 function ready() {
     window.postMessage('load', '*');

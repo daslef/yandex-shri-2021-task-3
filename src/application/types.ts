@@ -3,7 +3,7 @@ export const DELAY = 7000;
 
 export interface Slide {
     alias: string;
-    data: object;
+    data: Record<string, unknown>;
 }
 
 export type SlideTheme = 'light' | 'dark';

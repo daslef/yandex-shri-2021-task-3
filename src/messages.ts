@@ -1,6 +1,6 @@
 import { SlideTheme } from './application/types';
 
-export const messageUpdate = (alias: string, data: object) => ({ 
+export const messageUpdate = (alias: string, data: Record<string, unknown>) => ({ 
     type: 'message@UPDATE',
     alias,
     data,
