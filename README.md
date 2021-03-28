@@ -67,3 +67,10 @@ bars.forEach((el, i) => setScale(el, i < index ? 1 : 0));
 
 Решение:
 *selectors.ts* - удаление оператора *mergeMapTo(EMPTY)*
+
+#### Ошибка 8
+
+По умолчанию должна использоваться темная тема
+
+Решение:
+*index.html* и *frame.html* - *<body class="theme_dark">*
