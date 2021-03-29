@@ -66,6 +66,10 @@ body {
     user-select: none;
 }
 
+.sprint-up {
+    transform: rotate(90deg);
+}
+
 .prev {
     transform: rotate(180deg);
 }

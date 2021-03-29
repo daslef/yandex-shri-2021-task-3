@@ -87,7 +87,14 @@ const buildApp = {
         frame: './src/frame.ts',
     },
     devtool: 'inline-source-map',
-    devServer: { contentBase: './dist' },
+    devServer: { 
+        contentBase: './dist',
+        proxy: {
+            "/api/*": {
+              target: "http://localhost:9090"
+            }
+        } 
+    },
     plugins: [
         new CopyPlugin({ patterns: ['public'] }),
         new HtmlWebpackPlugin({ filename: 'index.html', chunks: ['index'], template: 'src/index.html' }),

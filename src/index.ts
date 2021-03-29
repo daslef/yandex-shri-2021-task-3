@@ -5,6 +5,7 @@ import {
     actionPrev,
     actionNext,
     actionRestart,
+    actionSprintUp,
     actionSetTheme,
 } from './application/actions';
 import { createState } from './application/state';
@@ -57,3 +58,4 @@ document.querySelector<HTMLDivElement>('.set-dark')?.addEventListener('click', (
 document.querySelector<HTMLDivElement>('.prev')?.addEventListener('click', () => dispatch(actionPrev()));
 document.querySelector<HTMLDivElement>('.next')?.addEventListener('click', () => dispatch(actionNext()));
 document.querySelector<HTMLDivElement>('.restart')?.addEventListener('click', () => dispatch(actionRestart()));
+document.querySelector<HTMLDivElement>('.sprint-up')?.addEventListener('click', () => dispatch(actionSprintUp()));

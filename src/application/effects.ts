@@ -1,6 +1,6 @@
 import { EMPTY, interval, merge, MonoTypeOperatorFunction, Observable, of } from 'rxjs';
 import { filter, mapTo, mergeMap, withLatestFrom } from 'rxjs/operators';
-import { Action, actionMessage, actionNext, actionPrev, actionRestart, actionTimer, actionUpdate } from './actions';
+import { Action, actionMessage, actionNext, actionPrev, actionRestart, actionTimer, actionUpdate, actionSprintUp } from './actions';
 import { DELAY, INTERVAL, Slide, State } from './types';
 
 export function ofType<T extends Action>(type: Action['type']): MonoTypeOperatorFunction<T> {
@@ -30,6 +30,10 @@ export function createEffects(
                     return of(actionNext());
                 case 'restart':
                     return of(actionRestart());
+                case 'sprintUp':
+                    return of(actionSprintUp())
+                case 'sprint-up':
+                    return of(actionSprintUp());
                 case 'update':
                     const data: Partial<Slide> = JSON.parse(a.params);
                     return of(actionUpdate(data));

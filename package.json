@@ -7,9 +7,11 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "start": "webpack serve --open --config-name buildApp",
+    "api": "node api/server.js",
     "lint": "npx eslint ./src --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "immer": "^8.0.1",
     "rxjs": "^6.6.3"
   },

@@ -44,6 +44,16 @@ export const data = produce((draft: Draft<State>, action: Action) => {
             draft.progress = 0;
             draft.index = 0;
             break;
+        case 'sprintUp':
+            fetch('http://localhost:9090/api/976')
+                .then(res => res.json())
+                .then(data => {
+                    draft.stories = data;
+                    draft.index = 0;
+                    draft.progress = 0;
+                    draft.pause = false;
+                })
+            break;
         case 'update':
             const { alias, data } = action.data;
 
