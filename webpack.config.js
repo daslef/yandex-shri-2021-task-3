@@ -113,6 +113,9 @@ const buildSlides = {
       filename: 'stories.js',
       path: path.resolve(__dirname, 'public')
     },
+    optimization: {
+        minimize: false
+    },
     plugins: [
         new MiniCssExtractPlugin({
            filename: 'stories.css',
