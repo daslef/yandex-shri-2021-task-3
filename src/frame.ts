@@ -33,6 +33,7 @@ function onDocumentClick(e: MouseEvent) {
         if (target.dataset?.action && target.dataset?.params) {
             const { action, params } = target.dataset;
             sendMessage(messageAction(action, params));
+            console.log(action, params)
         }
     }
 }

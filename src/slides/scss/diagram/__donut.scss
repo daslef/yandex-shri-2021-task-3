@@ -21,6 +21,12 @@
         margin: 0 auto;
     }
 
+    @include _landscape_1920 {
+        height: 32vw;
+        width: 32vw;
+        margin: 0 auto;
+    }
+
     &__svg {
         height: auto;
         width: 100%;

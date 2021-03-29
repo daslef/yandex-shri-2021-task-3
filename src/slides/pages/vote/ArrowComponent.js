@@ -8,12 +8,12 @@ export default function ArrowComponent({ direction, selected, offset }) {
         className += ' vote__arrow--selected'
     }
 
-    const dataParams = JSON.stringify({
+    const dataParams = {
         alias: 'vote',
         data: {
           offset: offset
         }
-    })
+    }
 
     return (
         `<svg 
@@ -23,7 +23,7 @@ export default function ArrowComponent({ direction, selected, offset }) {
             viewBox="0 0 64 64" 
             fill="none"
             data-action="update"
-            data-params="${dataParams}"
+            data-params=${JSON.stringify(dataParams)}
             xmlns="http://www.w3.org/2000/svg">
                 <path 
                     fill-rule="evenodd" 
