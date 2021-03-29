@@ -34,6 +34,7 @@ export const data = produce((draft: Draft<State>, action: Action) => {
                 draft.index++;
                 draft.progress = 0;
             } else {
+                draft.progress = 7000
                 draft.pause = true;
             }
 
