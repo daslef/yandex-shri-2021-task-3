@@ -1,0 +1,35 @@
+@import '../_media.scss';
+
+.activity {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 23px auto 1px;
+
+    @include _landscape_668 {
+        width: 425px;
+        margin: 0 97px 35px 98px;
+    }
+
+    @include _landscape_736 {
+        width: 70vw;
+        margin: 0 auto;
+        justify-content: center;
+    }
+}
+
+.theme_dark {
+    .activity__legend__img--light,
+    .heatmap__element--light {
+        display: none;
+    }
+}
+
+.theme_light {
+    .activity__legend__img--dark,
+    .heatmap__element--dark {
+        display: none;
+    }
+}

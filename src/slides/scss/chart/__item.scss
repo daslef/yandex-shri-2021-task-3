@@ -1,0 +1,73 @@
+@import '../_media.scss';
+
+.chart__item {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 6px;
+    position: relative;
+    margin-right: 24px;
+
+    @include _landscape_1024 {
+        width: 5vw;
+    }
+
+    &__value {
+        font-family: 'Roboto Bold';
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 8px;
+        color: var(--subhead-text-color);
+
+        @include _landscape_1920 {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__bar {
+        width: 100%;
+        margin-bottom: 12px;
+        background: var(--bar-background);
+        box-shadow: var(--bar-shadow);
+        border-radius: 6px;
+    }
+
+    &__title {
+        font-family: 'Roboto Medium';
+        font-size: 16px;
+        line-height: 18px;
+        color: var(--subhead-text-color);
+        @include _landscape_1920 {
+            font-size: 1.4rem;
+            line-height: 100%;
+        }
+    }
+
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3)  {
+        display: none;
+        @include _landscape_668 {
+            display: flex;
+        }
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+}
+
+.chart__item--active {
+    & > .chart__item__bar {
+        background: var(--bar-background-accent);
+        box-shadow: var(--bar-shadow-accent);
+    }
+
+    & > .chart__item__value {
+        color: var(--primary-text-color);
+    }
+}

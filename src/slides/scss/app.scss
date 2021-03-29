@@ -1,0 +1,87 @@
+@import './_media.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+body {
+    margin: 0;
+    background: var(--background-color);
+    font-family: 'Roboto';
+    color: var(--primary-text-color);
+}
+
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px 24px 23px 24px;
+
+    &__heading {
+        font-family: 'Roboto Bold';
+        font-size: 30px;
+        line-height: 32px;
+        text-align: center;
+        color: var(--primary-text-color);
+
+        @include _landscape_736 {
+            @include fluid-type(736px, 1920px, 30px, 52px);
+            margin-top: 0.25rem;
+            line-height: 107%;
+        }
+    }
+
+    &__subhead {
+        font-family: 'Roboto Medium';
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0px;
+        text-align: center;
+        color: var(--subhead-text-color);
+        margin-top: 8px;
+
+        @include _landscape_736 {
+            @include fluid-type(736px, 1920px, 16px, 32px);
+            margin-top: 1rem;
+            line-height: 112%;
+        }
+    }
+}
+
+@include _landscape_736 {
+    .slide__content {
+        height: calc(100vh - 18vh);
+    }    
+}
+
+
+@media screen and (orientation: portrait) {
+    
+    .slide {
+
+        &__heading {
+            text-align: left;
+        }
+
+        &__subhead {
+            align-self: flex-start;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (orientation: portrait) {
+    .slide__content {
+        max-width: 366px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,225 @@
+@import '../_media.scss';
+
+
+.vote {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    max-height: 526px;
+    width: 100%;
+    margin: 23px auto 0;
+
+    &--landscape {
+        display: none;
+    }
+
+    @include _portrait_1024 {
+        display: none;
+    }
+
+    @include _landscape_668 {
+        &--landscape {
+            display: flex;
+        }
+        &--portrait {
+            display: none;
+        }
+        margin-top: 5px;
+        padding-left: 7px;
+        padding-right: 8px;
+    }
+
+    @include _landscape_736 {
+        justify-content: space-around;
+    }
+
+    @include _landscape_1024 {
+        min-height: 90%;
+    }
+}
+
+.vote__item {
+    width: 104px;
+    height: 142px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    position: relative;
+
+    @include _landscape_1024 {
+        width: 15.4vw;
+        min-height: 20.9vw;
+        justify-content: space-around;
+    }
+
+    &__pic {
+        margin-top: 20px;
+        width: 64px;
+        height: 64px;
+        border-radius: 100px;
+
+        @include _landscape_1024 {
+            width: 128px;
+            height: 128px;
+        }
+
+        @include _landscape_1920 {
+            width: 256px;
+            height: 256px;
+        }
+    }
+
+    &__photo {
+        border-radius: 50%;
+        height: 64px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        filter: var(--filter);
+        
+        @include _landscape_1024 {
+            height: 128px;
+        }
+
+        @include _landscape_1920 {
+            height: 256px;
+        }
+    }
+    
+    &__name {
+        margin: 6px 4px;
+        font-family: 'Roboto Medium';
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        
+        @include _landscape_1024 {
+            margin: 1rem 0.5rem;
+            line-height: 130%;
+        }
+
+        @include _landscape_1366 {
+            margin: 1rem 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        @include _landscape_1920 {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__awards {
+        position: absolute;
+        font-size: 32px;
+        line-height: 32px;
+        font-family: 'Roboto Bold';        
+        top: -2px;
+        z-index: 1;
+
+        @include _landscape_1024 {
+            font-size: 54px;
+        }
+
+        @include _landscape_1366 {
+            font-size: 80pxpx;
+        }
+
+        @include _landscape_1920 {
+            font-size: 120px;
+        }
+    }
+
+    &--selected {
+        background: var(--person-accent-background);
+        box-shadow: var(--person-accent-shadow);
+        filter: var(--no-filter);
+    }
+
+    &:hover {
+        background: var(--person-hover-background);
+        box-shadow: var(--person-hover-shadow);
+        cursor: pointer;
+    }
+
+}
+
+.vote__arrow {
+
+    filter: var(--filter);
+
+    &--down {
+        transform: rotate(180deg);
+    }
+
+    & > path {
+        fill: var(--vote-button-background);
+    }
+
+    &--selected {
+        & > path {
+            fill: var(--vote-button-hover-background);
+        }
+    }
+
+    &:hover, &:disabled {
+
+        & > path {
+            fill: var(--vote-button-hover-background);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.slide__row {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--left, &--right {
+        justify-content: space-between;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    &--middle {
+        justify-content: space-between;
+        height: 100%;
+    }
+}
+
+.slide__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--2 > .vote__item:first-child, &--4 .vote__item:first-child {
+        margin-bottom: 4px;
+        @include _landscape_1024 {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &--4 {
+        margin-left: -1px;
+    }
+
+    &--3 .vote__arrow {
+        @include _landscape_1920 {
+            width: 128px;
+            height: auto;
+        }
+
+        &:first-child {
+            margin-bottom: 56px;
+            @include _landscape_1024 {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

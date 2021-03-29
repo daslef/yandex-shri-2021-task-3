@@ -1,0 +1,43 @@
+@import '../_media.scss';
+
+.podium {
+    box-sizing: border-box;
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    margin-bottom: -23px;
+
+    &--landscape {
+        display: none;
+    }
+
+    &--portrait {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    
+        margin-bottom: -23px;
+    }
+
+    @include _landscape_668 {
+        padding: 0 42px;
+
+        &--portrait {
+            display: none;
+        }
+
+        &--landscape {
+            display: flex;
+        }
+    }
+
+    @include _landscape_1024 {
+        width: calc(100vw - 48px);
+        margin: 0 auto -23px;
+    }
+
+}

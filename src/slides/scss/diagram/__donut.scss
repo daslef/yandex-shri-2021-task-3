@@ -1,0 +1,105 @@
+@import '../media.scss';
+
+
+.diagram__donut {
+    display: flex;
+
+    width: 100%;
+    position: relative;
+    // height: 100%;
+    
+    @include _landscape_668 {
+        margin-right: 40px;
+        width: 240px;
+        height: 240px;
+        min-width: 240px;
+    }
+
+    @include _landscape_1024 {
+        height: 40vw;
+        width: 40vw;
+        margin: 0 auto;
+    }
+
+    &__svg {
+        height: auto;
+        width: 100%;
+        transform: rotate(-120deg);
+        @include _landscape_668 {
+            width: auto;
+        }
+        @include _landscape_1024 {
+            margin: 0 auto;
+        }
+    }
+
+    &__text {
+        font-family: 'Roboto Bold';
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__total {
+        font-size: 30px;
+        line-height: 32px;            
+        width: 164px;
+        max-width: 164px;
+        color: var(--primary-text-color);
+        margin-bottom: 8px;
+
+        @include _landscape_668 {
+            font-size: 20px;
+            line-height: 22px;
+            width: 120px;
+            max-width: 120px;
+        }
+
+        @include _landscape_1024 {
+            font-size: 3vw;
+            line-height: 94%;
+            margin-bottom: 2vh;
+        }
+
+        @include _landscape_1920 {
+            font-size: 3vw;
+            width: 80%;
+            max-width: 80%;
+        }
+    }
+
+    &__diff {
+        font-size: 20px;
+        line-height: 22px;
+        width: 164px;
+        max-width: 164px;
+        color: var(--subhead-text-color);
+
+        @include _landscape_668 {
+            font-family: 'Roboto Medium';
+            font-size: 16px;
+            line-height: 18px;
+            width: 120px;
+            max-width: 120px;
+        }
+
+        @include _landscape_1024 {
+            font-size: 1.7vw;
+            width: 180px;
+            max-width: 180px;
+        }
+
+        @include _landscape_1920 {
+            font-size: 1.5vw;
+            width: 80%;
+            max-width: 80%;
+        }
+    }
+}

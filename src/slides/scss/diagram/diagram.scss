@@ -1,0 +1,35 @@
+@import '../_media.scss';
+
+
+.diagram {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // max-height: 526px;
+    width: 100%;
+    margin: 32px auto 1px;
+
+    @include _landscape_668 {
+        flex-direction: row;
+        margin: 29px auto 6px;
+        max-height: 240px;
+        align-items: center;
+        padding-left: 18px;
+        padding-right: 18px;
+        justify-content: space-between;
+    }
+
+    @include _landscape_1024 {
+        max-height: none;
+    }
+
+}
+
+.theme_dark .diagram__donut--light {
+    display: none;   
+}
+
+.theme_light .diagram__donut--dark {
+    display: none;
+}

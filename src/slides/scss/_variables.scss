@@ -1,0 +1,179 @@
+:root {
+    --black: #261C00;
+    --yellow: #F4B000;
+    --grey: #918F8A;
+    --lightgrey: #BFBFBF;
+    --white: #FCFBF7;
+
+    --grayscale-filter: grayscale(100%);
+    --no-filter: grayscale(0%);
+
+    --background-dark: radial-gradient(70.24% 70.24% at 49.87% 29.76%, rgba(18, 12, 1, 0.9) 0%, #000000 100%);
+
+    --person-accent-background-dark: radial-gradient(91.67% 122.17% at 69.17% -11.17%, #FFA300 0%, #2D1C00 100%);
+    --person-accent-background-light: linear-gradient(180deg, #FFF2D1 0.82%, #FFD66C 100%);
+
+    --person-accent-shadow-dark: inset -1px 1px 1px rgba(255, 255, 255, 0.4), inset 0px 6px 15px rgba(255, 162, 0, 0.4);
+    --person-accent-shadow-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.8);
+
+    --person-hover-background-dark: radial-gradient(85.62% 148.33% at 49.85% 100%, rgba(68, 58, 42, 0.7864) 0%, rgba(0, 0, 0, 0.8) 100%);
+    --person-hover-background-light: linear-gradient(180deg, rgba(244, 244, 244, 0.9) 0.82%, #E9E9E9 100%, rgba(234, 234, 234, 0) 100%);
+    
+    --person-hover-shadow-dark: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 16px rgba(255, 255, 255, 0.1);
+    --person-hover-shadow-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(207, 207, 207, 0.5);
+
+    --bar-background-light: linear-gradient(180deg, rgba(244, 244, 244, 0.9) 0.82%, #E9E9E9 100%, rgba(234, 234, 234, 0) 100%);
+    --bar-background-dark: linear-gradient(180deg, rgba(0, 0, 0, 0) -2.22%, rgba(0, 0, 0, 0.8) 100%), radial-gradient(149.08% 95.38% at 38.75% 71.48%, #000000 0%, #231900 0.01%, #4D4D4D 100%);
+    --bar-background-accent-light: linear-gradient(180deg, #FFF2D1 0.82%, #FFD66C 100%);
+    --bar-background-leaders-accent-light: linear-gradient(180deg, #FFF2D1 0.82%, #FFD66C 100%);
+    --bar-background-leaders-accent-dark: radial-gradient(91.67% 122.17% at 69.17% -11.17%, #FFA300 0%, #2D1C00 100%); 
+    --bar-background-accent-dark: radial-gradient(81.14% 100% at 50% 0%, #FFA300 0%, #2D1C00 100%);
+    --bar-background-accent-dark: radial-gradient(81.14% 100% at 50% 0%, #FFA300 0%, #2D1C00 100%);
+
+    --bar-shadow-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(207, 207, 207, 0.5);
+    --bar-shadow-dark: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 16px rgba(103, 103, 103, 0.6);
+    --bar-shadow-accent-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.8);
+    --bar-shadow-accent-dark: inset -1px 1px 1px rgba(255, 255, 255, 0.4), inset 0px 6px 15px rgba(255, 162, 0, 0.4);
+
+    --activity-slider-min-background-dark: radial-gradient(3906.1% 3815.36% at 89.06% 78.28%, rgba(19, 17, 16, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%);
+    --activity-slider-min-background-light: radial-gradient(2408.25% 2730.55% at 89.06% 78.28%, rgba(250, 250, 250, 0.6) 0%, rgba(250, 250, 250, 0.6) 100%);
+    --activity-slider-min-shadow-dark: inset -1px 0px 2px rgba(255, 255, 255, 0.2), inset 1px 1px 16px rgba(112, 102, 94, 0.2);
+    --activity-slider-min-shadow-light: inset -1px 0px 2px rgba(250, 250, 250, 0.2), inset 1px 1px 16px rgba(106, 106, 106, 0.2);
+
+    --activity-slider-mid-background-dark: radial-gradient(5752.25% 5190.32% at 74.43% 60.32%, rgba(0, 0, 0, 0.9) 0%, rgba(35, 22, 0, 0.9) 0.01%, rgba(112, 92, 94, 0.9) 100%);
+    --activity-slider-mid-background-light: radial-gradient(2408.25% 2730.55% at 89.06% 78.28%, rgba(250, 250, 250, 0.8) 0%, rgba(250, 250, 250, 0.8) 100%);
+    --activity-slider-mid-shadow-dark: inset -1px 0px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 10px rgba(93, 116, 141, 0.6);
+    --activity-slider-mid-shadow-light: inset -1px 0px 2px rgba(250, 250, 250, 0.2), inset 1px 1px 16px rgba(106, 106, 106, 0.3);
+
+    --activity-slider-max-background-dark: radial-gradient(5528.36% 3005.63% at 74.43% 75.84%, rgba(0, 0, 0, 0.9) 0%, rgba(33, 22, 2, 0.9) 0.01%, rgba(172, 113, 9, 0.9) 100%);
+    --activity-slider-max-background-light: radial-gradient(68.1% 68.1% at 4.41% 31.9%, #FFF6DD 8.72%, #FFFEFA 100%);
+    --activity-slider-max-shadow-dark: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 10px rgba(242, 159, 13, 0.2);
+    --activity-slider-max-shadow-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.4);
+
+    --activity-slider-extra-background-dark: radial-gradient(2258.03% 620.37% at 83.33% 88.95%, #201502 0%, #C7830A 100%);
+    --activity-slider-extra-background-light: radial-gradient(66.02% 86.49% at -16.18% 13.51%, rgba(255, 186, 6, 0.85) 0%, #FFF2AD 100%);
+    --activity-slider-extra-shadow-dark: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 10px rgba(242, 159, 13, 0.9);
+    --activity-slider-extra-shadow-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.4);
+
+    --diagram-indicator1-background-dark: #EE9700;
+    --diagram-indicator1-shadow-dark: 0px 0px 20px -8px rgba(247, 178, 1, 0.2), inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 12px rgba(255, 184, 0, 0.9);
+
+    --diagram-indicator1-background-light: radial-gradient(49.84% 49.84% at 49.84% 50.16%, rgba(255, 184, 0, 0.56) 81.25%, rgba(255, 239, 153, 0.32) 100%);
+    --diagram-indicator1-shadow-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.9);
+
+    --diagram-indicator2-background-dark: #955F00;
+    --diagram-indicator2-shadow-dark: 0px 0px 20px -8px rgba(247, 178, 1, 0.2), inset -1px 1px 1px rgba(255, 255, 255, 0.5);
+
+    --diagram-indicator2-background-light: radial-gradient(49.84% 49.84% at 49.84% 50.16%, rgba(255, 184, 0, 0.24) 81.25%, rgba(255, 239, 153, 0.12) 100%);
+    --diagram-indicator2-shadow-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.4);
+
+    --diagram-indicator3-background-dark: #313131; 
+    // radial-gradient(100% 100% at 50% 0%, rgba(151, 151, 151, 0.5) 0%, rgba(41, 41, 41, 0.5) 100%);
+    --diagram-indicator3-shadow-dark: inset -1px 1px 1px rgba(255, 255, 255, 0.5);
+
+    --diagram-indicator3-background-light: radial-gradient(49.84% 49.84% at 49.84% 50.16%, rgba(166, 166, 166, 0.1725) 82.81%, rgba(203, 203, 203, 0.05) 92.19%);
+    --diagram-indicator3-shadow-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(105, 105, 105, 0.2);
+
+    --diagram-indicator4-background-dark: radial-gradient(100% 100% at 50% 0%, rgba(62, 62, 62, 0.5) 0%, rgba(40, 40, 40, 0.5) 100%);
+    --diagram-indicator4-shadow-dark: inset -1px 1px 1px rgba(255, 255, 255, 0.5);
+
+    --diagram-indicator4-background-light: radial-gradient(49.84% 49.84% at 49.84% 50.16%, rgba(191, 191, 191, 0.345) 82.81%, rgba(228, 228, 228, 0.1) 92.19%);
+    --diagram-indicator4-shadow-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(131, 131, 131, 0.6);
+
+}
+
+.theme_light {
+    --primary-text-color: var(--black);
+    --subhead-text-color: var(--lightgrey);
+
+    --background-color: var(--white);
+
+    --bar-background: var(--bar-background-light);
+    --bar-background-accent: var(--bar-background-accent-light);
+    --bar-background-leaders-accent: var(--bar-background-leaders-accent-light);  
+
+    --bar-shadow: var(--bar-shadow-light);
+    --bar-shadow-accent: var(--bar-shadow-accent-light);
+
+    --person-accent-background: var(--person-accent-background-light);
+    --person-accent-shadow: var(--person-accent-shadow-light);
+
+    --person-hover-background: var(--person-hover-background-light);
+    --person-hover-shadow: var(--person-hover-shadow-light);
+
+    --person-selected-delimiter: var(--black);
+    --person-selected-text-color: var(--black);
+
+    --vote-button-background: #BFBFBF;
+    --vote-button-hover-background: #f4b000;
+
+    --filter: var(--no-filter); // заменить?
+
+    --picture-filter: var(--no-filter);
+
+    --activity-slider-min-background: var(--activity-slider-min-background-light);
+    --activity-slider-min-shadow: var(--activity-slider-min-shadow-light);
+    --activity-slider-mid-background: var(--activity-slider-mid-background-light);
+    --activity-slider-mid-shadow: var(--activity-slider-mid-shadow-light);
+    --activity-slider-max-background: var(--activity-slider-max-background-light);
+    --activity-slider-max-shadow: var(--activity-slider-max-shadow-light);
+    --activity-slider-extra-background: var(--activity-slider-extra-background-light);
+    --activity-slider-extra-shadow: var(--activity-slider-extra-shadow-light); 
+
+    --diagram-indicator1-background: var(--diagram-indicator1-background-light);
+    --diagram-indicator2-background: var(--diagram-indicator2-background-light);
+    --diagram-indicator3-background: var(--diagram-indicator3-background-light);
+    --diagram-indicator4-background: var(--diagram-indicator4-background-light);
+
+    --diagram-indicator1-shadow: var(--diagram-indicator1-shadow-light);
+    --diagram-indicator2-shadow: var(--diagram-indicator2-shadow-light);
+    --diagram-indicator3-shadow: var(--diagram-indicator3-shadow-light);
+    --diagram-indicator4-shadow: var(--diagram-indicator4-shadow-light);
+}
+
+.theme_dark {
+    --primary-text-color: var(--white);
+    --subhead-text-color: var(--grey);
+
+    --background-color: var(--background-dark);
+
+    --bar-background: var(--bar-background-dark);
+    --bar-background-accent: var(--bar-background-accent-dark);
+    --bar-background-leaders-accent: var(--bar-background-leaders-accent-dark);  
+    --bar-shadow: var(--bar-shadow-dark);
+    --bar-shadow-accent: var(--bar-shadow-accent-dark);
+
+    --person-accent-background: var(--person-accent-background-dark);
+    --person-accent-shadow: var(--person-accent-shadow-dark);
+    
+    --person-hover-background: var(--person-hover-background-dark);
+    --person-hover-shadow: var(--person-hover-shadow-dark);
+
+    --person-selected-delimiter: var(--grey);
+    --person-selected-text-color: var(--white);
+
+    --vote-button-background: var(--grey);
+    --vote-button-hover-background: var(--white);
+
+    --filter: var(--grayscale-filter);
+    --picture-filter: var(--grayscale-filter);
+
+    --activity-slider-min-background: var(--activity-slider-min-background-dark);
+    --activity-slider-min-shadow: var(--activity-slider-min-shadow-dark);
+    --activity-slider-mid-background: var(--activity-slider-mid-background-dark);
+    --activity-slider-mid-shadow: var(--activity-slider-mid-shadow-dark);
+    --activity-slider-max-background: var(--activity-slider-max-background-dark);
+    --activity-slider-max-shadow: var(--activity-slider-max-shadow-dark);
+    --activity-slider-extra-background: var(--activity-slider-extra-background-dark);
+    --activity-slider-extra-shadow: var(--activity-slider-extra-shadow-dark);
+
+    --diagram-indicator1-background: var(--diagram-indicator1-background-dark);
+    --diagram-indicator2-background: var(--diagram-indicator2-background-dark);
+    --diagram-indicator3-background: var(--diagram-indicator3-background-dark);
+    --diagram-indicator4-background: var(--diagram-indicator4-background-dark);
+
+    --diagram-indicator1-shadow: var(--diagram-indicator1-shadow-dark);
+    --diagram-indicator2-shadow: var(--diagram-indicator2-shadow-dark);
+    --diagram-indicator3-shadow: var(--diagram-indicator3-shadow-dark);
+    --diagram-indicator4-shadow: var(--diagram-indicator4-shadow-dark);
+}

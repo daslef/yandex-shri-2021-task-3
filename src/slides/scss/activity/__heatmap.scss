@@ -1,0 +1,100 @@
+@import '../_media.scss';
+
+.activity__heatmap {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    margin-bottom: 50px;
+    justify-content: center;
+    position: relative;
+
+    &--landscape {
+        display: none;
+    }
+
+    &--portrait {
+        display: flex;
+        margin-bottom: 46px;
+    }
+
+    @include _landscape_668 {
+        margin-bottom: 28px;
+        &--portrait {
+            display: none;
+        }
+        &--landscape {
+            display: flex;
+        }
+    }
+
+    @include _landscape_736 {
+        max-height: 54vh;
+    }
+
+    @include _landscape_1024 {
+        max-height: 40vh;
+    }
+
+    @include _landscape_1366 {
+        max-height: 50vh;
+    }
+}
+
+
+
+.heatmap__row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    width: 100%;
+
+    @include _landscape_668 {
+        position: absolute; 
+        &:nth-of-type(1) { bottom: 78px !important; }
+        &:nth-of-type(2) { bottom: 65px !important; }
+        &:nth-of-type(3) { bottom: 52px !important; }
+        &:nth-of-type(4) { bottom: 39px !important; }
+        &:nth-of-type(5) { bottom: 26px !important; }
+        &:nth-of-type(6) { bottom: 13px !important; }
+        &:nth-of-type(7) { bottom: 0px !important; }
+    }
+
+    @include _landscape_1366 {
+        &:nth-of-type(1) { bottom: 144px !important; }
+        &:nth-of-type(2) { bottom: 120px !important; }
+        &:nth-of-type(3) { bottom: 96px !important; }
+        &:nth-of-type(4) { bottom: 72px !important; }
+        &:nth-of-type(5) { bottom: 48px !important; }
+        &:nth-of-type(6) { bottom: 24px !important; }
+    }
+
+    @include _landscape_1920 {
+        &:nth-of-type(1) { bottom: 276px !important; }
+        &:nth-of-type(2) { bottom: 230px !important; }
+        &:nth-of-type(3) { bottom: 186px !important; }
+        &:nth-of-type(4) { bottom: 138px !important; }
+        &:nth-of-type(5) { bottom: 92px !important; }
+        &:nth-of-type(6) { bottom: 46px !important; }
+    }
+
+}
+
+.heatmap__gap {
+    width: 17px;
+    flex: 1;
+}
+
+.heatmap__element {
+    flex: 2;
+
+    @include _landscape_668 {
+
+
+    }
+}
+
+.heatmap__image {
+    width: 100%;
+}

@@ -1,0 +1,77 @@
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+  
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+  
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        
+        & {
+            font-size: $min-font-size;
+            @media screen and (min-width: $min-vw) {
+                font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            }
+  
+            @media screen and (min-width: $max-vw) {
+                font-size: $max-font-size;
+            }
+        }
+    }
+}
+
+
+@mixin _portrait_668 {
+    @media screen and (min-width: 668px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin _portrait_1024 {
+    @media screen and (min-width: 1024px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+
+@mixin _landscape_568 {
+    @media screen and (max-width: 568px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin _landscape_668 {
+    @media screen and (min-width: 668px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+
+@mixin _landscape_736 {
+    @media screen and (min-width: 736px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin _landscape_1024 {
+    @media screen and (min-width: 1024px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin _landscape_1366 {
+    @media screen and (min-width: 1366px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin _landscape_1920 {
+    @media screen and (min-width: 1920px) and (orientation: landscape) {
+        @content;
+    }
+}
+

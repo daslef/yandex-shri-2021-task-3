@@ -1,0 +1,98 @@
+@import '../media.scss';
+
+
+.diagram__legend {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__separator {
+        background-color: #BFBFBF;
+        opacity: 0.3;
+        min-height: 2px;
+        margin: 16px auto;
+        width: 100%;
+    }
+
+    & > div:nth-of-type(3) > .legend__item__indicator {
+        background: var(--diagram-indicator2-background); 
+        box-shadow: var(--diagram-indicator2-shadow);
+    }
+
+    & > div:nth-of-type(5) > .legend__item__indicator {
+        background: var(--diagram-indicator3-background); 
+        box-shadow: var(--diagram-indicator3-shadow);
+    }
+
+    & > div:nth-of-type(7) > .legend__item__indicator {
+        background: var(--diagram-indicator4-background); 
+        box-shadow: var(--diagram-indicator4-shadow);
+    }
+
+    @include _landscape_1024 {
+        width: 30vw;
+        margin-right: 5vw;
+    }
+}
+
+
+.legend__item {
+    display: flex;
+    align-items: center;
+
+    &__indicator {
+        min-width: 16px;
+        min-height: 16px;
+
+        background: var(--diagram-indicator1-background); 
+        box-shadow: var(--diagram-indicator1-shadow);
+        border-radius: 50%;
+        margin-right: 10px;
+
+        @include _landscape_1920 {
+            min-width: 32px;
+            min-height: 32px;
+            margin-right: 18px;
+        }
+
+    }
+
+    &__title {
+        font-family: 'Roboto Medium';
+        font-size: 16px;
+        line-height: 18px;
+        color: var(--primary-text-color);
+
+        @include _landscape_1920 {
+            font-size: 26px;
+            line-height: 100%;
+        }
+    }
+
+    &__values {
+        display: flex;
+        margin-left: auto;
+
+        color: var(--subhead-text-color);
+
+        font-family: 'Roboto Medium';
+        font-size: 16px;
+        line-height: 18px;
+
+        @include _landscape_1920 {
+            font-size: 28px;
+            line-height: 100%;
+        }
+
+    }
+
+    &__diff {
+        margin-right: 16px;
+        
+    }
+
+    &__total {
+
+    }
+}
